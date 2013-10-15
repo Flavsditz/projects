@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+ 
 ############################
 #
 #  Author: Flavio Diez
@@ -60,21 +60,20 @@ def mergeSort(lis):
         left = mergeSort(lis[:len(lis)/2])
         right = mergeSort(lis[len(lis)/2:])
 
-    print "Left -"+str(left)
-    print "Right -"+str(right)
-
     #Start to organize the list:
     ans = []
     i = j = 0
     while i < len(left) and j < len(right):
         # Add to final list
         if left[i] < right[j]:
-            ans.append(left.pop(0))
+            ans.append(left[i])
             i += 1
         else:
-            ans.append(right.pop(0))
+            ans.append(right[j])
             j += 1
 
+    ans += left[i:]
+    ans += right[j:]
     return ans
 
 def inplaceMergeSort():
@@ -141,22 +140,22 @@ def main(size):
     print '\n'
 
     # Quicksort Algorithm
-    print "Quicksort Algorithm\n-------------------"
+    #print "Quicksort Algorithm\n-------------------"
     l = randList[:]
     toc = time.time()
-    print quickSort(l)
+    quickSort(l)
     tic = time.time()
-    print 'Time - ' + str(tic - toc)
+    print 'Quicksort - ' + str(tic - toc)
 
-    print '\n\n'
+    #print '\n'
     
     # Mergesort Algorithm
-    print "Mergesort Algorithm\n-------------------"
+    #print "Mergesort Algorithm\n-------------------"
     l = randList[:]
     toc = time.time()
-    print mergeSort(l)
+    mergeSort(l)
     tic = time.time()
-    print 'Time - ' + str(tic - toc)
+    print 'Mergesort - ' + str(tic - toc)
 
 if __name__=="__main__":
     main(int(sys.argv[1]))
