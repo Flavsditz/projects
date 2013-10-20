@@ -38,6 +38,7 @@
             <property name="adjustment">adjustment1</property>
             <property name="fill_level">255</property>
             <property name="round_digits">1</property>
+            <property name="value_pos">bottom</property>
             <signal name="value-changed" handler="on_binValue_value_changed" swapped="no"/>
           </object>
           <packing>

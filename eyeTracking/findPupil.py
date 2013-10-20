@@ -6,35 +6,32 @@ pygtk.require('2.0')
 import gtk
 import sys
 
-import threading
+from multiprocessing import Process, Queue
 import time
 
 from SimpleCV import VirtualCamera, DrawingLayer, Color, Camera
 
-binarizationValue = 30
+
 
 
 class gui:
-    def __init__(self):
+    def __init__(self, queue):
         self.gladefile = "binControl.glade"
         self.glade = gtk.Builder()
         self.glade.add_from_file(self.gladefile)
         self.glade.connect_signals(self)
         self.glade.get_object("windowMain").show_all()
+        self.q = queue
 
         self.scale = self.glade.get_object("binValue")
-        #self.scale.connect("value-changed", self.on_binValue_value_changed)
 
     def on_MainWindow_delete_event(self, widget, event):
         gtk.main_quit()
 
-
     def on_binValue_value_changed(self, widget):
-        print "At change value"
         try:
-            global binarizationValue
-            binarizationValue = self.glade.get_object("binValue").get_value()
-            print binarizationValue
+            self.q.put(self.glade.get_object("binValue").get_value())
+
         except ValueError:
             return 0
 
@@ -43,18 +40,20 @@ class gui:
         sys.exit(0)
 
 
-def startGUI():
-    gui()
+def startGUI(queue):
+    gui(queue)
     gtk.main()
 
 
 
-def startCAM():
-    global binarizationValue
+def startCAM(queue):
     cam = Camera()
     #cam = VirtualCamera("pupilTest.mp4", "video", 300)
+    binarizationValue = 30
 
     while True:
+        if not queue.empty():
+            binarizationValue = queue.get()
         img = cam.getImage().binarize(binarizationValue)
         blobs = img.findBlobs()
 
@@ -77,16 +76,14 @@ def startCAM():
 
 def main():
 
-    print "First Thread"
+    #Prepare Queue for passing binarization
+    q = Queue()
 
-    guiThread = threading.Thread(target=startGUI)
-    guiThread.start()
+    guiProcess = Process(target=startGUI, args=(q,))
+    guiProcess.start()
 
-    startCAM()
-    print "Got Here!"
-    '''
-    startGUI()
-    '''
+    camProcess = Process(target=startCAM, args=(q,))
+    camProcess.start()
 
 
 

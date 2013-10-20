@@ -281,9 +281,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.332"
-     inkscape:cx="370.63396"
-     inkscape:cy="526.88773"
+     inkscape:zoom="1.5804445"
+     inkscape:cx="372.04724"
+     inkscape:cy="240.81609"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -311,25 +311,26 @@
     <rect
        style="color:#000000;fill:#d6d6d6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect2985"
-       width="640"
-       height="500"
+       width="1600"
+       height="900"
        x="50.633957"
-       y="275.47446"
+       y="-124.52554"
        rx="0"
        inkscape:export-filename="/home/flavio/git/eyeTracking/gui/images/rect.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <rect
-       style="color:#000000;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6.59999999999999964;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3923)"
+       style="color:#000000;fill:#8a8a8a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6.5999999;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3923);enable-background:accumulate"
        id="rect3757"
        width="362.61258"
        height="500"
-       x="194.74095"
-       y="276.18109"
-       rx="0" />
+       x="673.32764"
+       y="75.474464"
+       rx="0"
+       transform="matrix(0.99999978,0,0,1.8275793,1.3940079e-4,-276.01718)" />
     <g
        id="g4023"
-       transform="matrix(1,0,0,0.74381191,0,160.15001)">
+       transform="matrix(1,0,0,0.74381191,478.58671,-40.55662)">
       <path
          sodipodi:nodetypes="csccccc"
          inkscape:connector-curvature="0"
@@ -346,7 +347,7 @@
     <path
        inkscape:connector-curvature="0"
        style="fill:#666666;fill-opacity:1;stroke:none;filter:url(#filter4144)"
-       d="m 490.00815,328.89218 c -7.87022,0 -14.24475,6.63334 -14.24475,14.81995 0,8.18662 6.37453,14.83124 14.24475,14.83124 7.87023,0 14.25603,-6.64462 14.25603,-14.83124 0,-8.18661 -6.3858,-14.81995 -14.25603,-14.81995 z m 0,8.74084 c 3.28256,0 5.94377,2.71746 5.94377,6.07911 0,3.36166 -2.66121,6.09039 -5.94377,6.09039 -3.28256,0 -5.94377,-2.72873 -5.94377,-6.09039 0,-3.36165 2.66121,-6.07911 5.94377,-6.07911 z"
+       d="m 968.59486,128.18555 c -7.87022,0 -14.24475,6.63334 -14.24475,14.81995 0,8.18662 6.37453,14.83124 14.24475,14.83124 7.87023,0 14.25603,-6.64462 14.25603,-14.83124 0,-8.18661 -6.3858,-14.81995 -14.25603,-14.81995 z m 0,8.74084 c 3.28256,0 5.94377,2.71746 5.94377,6.07911 0,3.36166 -2.66121,6.09039 -5.94377,6.09039 -3.28256,0 -5.94377,-2.72873 -5.94377,-6.09039 0,-3.36165 2.66121,-6.07911 5.94377,-6.07911 z"
        id="path3928"
        inkscape:export-filename="/home/flavio/git/eyeTracking/gui/images/eye.png"
        inkscape:export-xdpi="90"
@@ -354,7 +355,7 @@
     <g
        style="fill:none;stroke:#66666f;stroke-opacity:1;filter:url(#filter4130)"
        id="g3951"
-       transform="matrix(0.36091216,0,0,0.36091216,429.21701,3.93589)"
+       transform="matrix(0.36091216,0,0,0.36091216,907.80372,-196.77074)"
        inkscape:export-filename="/home/flavio/git/eyeTracking/gui/images/eye.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
@@ -374,19 +375,19 @@
     <text
        xml:space="preserve"
        style="font-size:56.36089706px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;filter:url(#filter4088);font-family:Sans"
-       x="224.4202"
-       y="406.04065"
+       x="703.0069"
+       y="205.33401"
        id="text4457"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4459"
-         x="224.4202"
-         y="406.04065">Tracking</tspan></text>
+         x="703.0069"
+         y="205.33401">Tracking</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot4447"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ececec;fill-opacity:1;stroke:none;filter:url(#filter4280);font-family:Sans"
-       transform="matrix(1.2787361,0,0,1.2787361,-92.429629,-257.00943)"><flowRegion
+       transform="matrix(1.2787361,0,0,1.2787361,386.15708,-457.71606)"><flowRegion
          id="flowRegion4449"><rect
            id="rect4451"
            width="145.67986"
