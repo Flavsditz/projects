@@ -1,0 +1,10 @@
+male(edward).
+male(albert).
+
+female(alice).
+female(victoria).
+
+parents(edward,albert,victoria).
+parents(alice,albert,victoria).
+
+sisterOf(X,Y) :- female(X), parents(X,M,F), parents(Y,M,F).
